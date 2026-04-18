@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBOB - Tạo học phần mới</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar-container">
+            <div class="slim-sidebar">
+                <div class="slim-item"><img src="Suộc Ảnh/ngoinha.png" onclick="window.location.href='trang2.html'"></div>
+                <div class="slim-item active"><img src="Suộc Ảnh/togiay.png" onclick="window.location.href='trang7.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/buts.png" onclick="window.location.href='trang8.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/ghim.png" class="show-alert"></div>
+            </div>
+            <div class="menu-sidebar">
+                <h1 class="logo">SpongeBOB</h1>
+                <nav class="nav-menu">
+                    <a href="trang2.html" class="nav-link">Trang chủ</a> <!--thay đường dẫn-->
+                    <a href="trang6.html" class="nav-link">Thư viện</a>
+                    <a href="trang7.html" class="nav-link">Học từ mới</a>
+                    <a href="#" class="nav-link">Luyện thi</a>
+                    <div class="sidebar-divider"></div>
+                </nav>
+                <div class="sidebar-illustration">
+                    <img src="Suộc Ảnh/sidebar.png" alt="Spongebob and friends">
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="top-header">
+                <div class="search-section">
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                
+                <div class="header-controls">
+                    <span class="v-divider"></span>
+                    <div class="control-item lang show-alert" style="cursor: pointer;">ENG <span>▼</span></div> ,<!--Thêm show-alert-->
+                    <span class="v-divider"></span>
+                    <div class="control-item add-btn create-btn" style="cursor: pointer;">Tạo</div> <!--Thêm create-btn-->
+                    <span class="v-divider"></span>
+                    <div class="control-item user login-btn" style="cursor: pointer;"> <!--Thêm login-btn-->
+                        <img src="Suộc Ảnh/thinking.jpg" class="user-avatar">
+                        <span class="username">Guest <span>▼</span></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="module-create-content">
+                <h1 class="main-page-title">Tạo một học phần mới</h1>
+
+                <div class="action-control-bar"> <!--Sửa phần này để đổi được chế độ-->
+                    <div class="status-dropdown-container">
+                        <button class="btn-status-public" id="statusBtn">
+                            <span class="status-icon-emoji" id="statusIcon">🌍</span> 
+                            <span id="statusText">Công khai</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <ul class="status-dropdown-menu" id="statusMenu">
+                            <li data-status="public" data-icon="🌍">Công khai</li>
+                            <li data-status="private" data-icon="🔒">Chỉ mình tôi</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="spacer-flex"></div>
+
+                    <div class="header-action-group">
+                        <button class="btn-action btn-orange show-alert">Tạo</button>
+                        <button class="btn-action btn-brown show-alert">Ôn luyện</button>
+                    </div>
+                </div>
+
+                <section class="form-input-section">
+                    <input type="text" id="newDeckTitle" class="field-input title-field" placeholder="Tiêu đề">
+                    <input type="text" class="field-input desc-field" placeholder="Thêm mô tả...">
+                    <div class="divider-wrapper"><hr class="custom-divider"></div>
+                </section>
+
+                <div class="vocabulary-cards-container">
+                    <div class="hint-text-align">
+                        <span class="text-hint">Gợi ý</span>
+                    </div>
+
+                    <div class="vocab-card-item">
+                        <span class="card-number">1</span>
+                        <div class="card-inputs-row">
+                            <input type="text" placeholder="Thuật ngữ" class="input-term term-input"> <!--thêm term-input cho trùng js-->
+                            <input type="text" placeholder="Định nghĩa" class="input-def def-input"> <!--thêm def-input cho trùng js-->
+                        </div>
+                        <div class="image-upload-box" style="cursor: pointer;">Hình ảnh</div>
+                    </div>
+
+                    <div class="vocab-card-item">
+                        <span class="card-number">2</span>
+                        <div class="card-inputs-row">
+                            <input type="text" placeholder="Thuật ngữ" class="input-term term-input"> <!--thêm term-input cho trùng js-->
+                            <input type="text" placeholder="Định nghĩa" class="input-def def-input"> <!--thêm def-input cho trùng js-->
+                        </div>
+                        <div class="image-upload-box" style="cursor: pointer;">Hình ảnh</div>
+                    </div>
+
+                    <div class="vocab-card-item">
+                        <span class="card-number">3</span>
+                        <div class="card-inputs-row">
+                            <input type="text" placeholder="Thuật ngữ" class="input-term term-input"> <!--thêm term-input cho trùng js-->
+                            <input type="text" placeholder="Định nghĩa" class="input-def def-input"> <!--thêm def-input cho trùng js-->
+                        </div>
+                        <div class="image-upload-box" style="cursor: pointer;">Hình ảnh</div>
+                    </div>
+                </div>
+
+                <footer class="sticky-form-footer">
+                    <button class="btn-add-more">Thêm thẻ</button>
+                    <div class="footer-final-btns">
+                        <button id="addCardBtn" class="btn-action btn-orange">Tạo</button> <!--Thêm id cho nút tạo-->
+                        <button class="btn-action btn-brown show-alert">Ôn luyện</button> <!--Thêm show-alert-->
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="jstest.js"></script>
+</body>
+</html>

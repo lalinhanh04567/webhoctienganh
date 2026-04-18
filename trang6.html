@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBOB Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar-container">
+            <div class="slim-sidebar">
+                <div class="slim-item"><img src="Suộc Ảnh/ngoinha.png" onclick="window.location.href='trang2.html'"></div>
+                <div class="slim-item active"><img src="Suộc Ảnh/togiay.png" onclick="window.location.href='trang7.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/buts.png" onclick="window.location.href='trang8.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/ghim.png" class="show-alert"></div>
+            </div>
+            <div class="menu-sidebar">
+                <h1 class="logo">SpongeBOB</h1>
+                <nav class="nav-menu">
+                    <a href="trang2.html" class="nav-link">Trang chủ</a> <!--Thay đường dẫn-->
+                    <a href="trang6.html" class="nav-link active">Thư viện</a>
+                    <a href="trang7.html" class="nav-link">Học từ mới</a>
+                    <a href="#" class="nav-link">Luyện thi</a>
+                    <div class="sidebar-divider"></div>
+                </nav>
+                <div class="sidebar-illustration">
+                    <img src="Suộc Ảnh/sidebar.png" alt="Spongebob and friends">
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="top-header">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                
+                <div class="header-controls">
+                    <span class="v-divider"></span>
+                    <div class="control-item lang show-alert" style="cursor: pointer;">ENG <span>▼</span></div> <!--Thêm show-alert-->
+                    <span class="v-divider"></span>
+                    
+                    <div class="control-item add-btn create-btn" style="cursor: pointer;">Tạo</div> <!--Thêm create-btn-->
+                    
+                    <span class="v-divider"></span>
+                    
+                    <div class="control-item user login-btn" style="cursor: pointer;"> <!--Thêm login-btn-->
+                        <img src="Suộc Ảnh/thinking.jpg" class="user-avatar">
+                        <span class="username">Guest</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-grid">
+                    <main class="content-left">
+                        <div class="main-body-content">
+                            <div class="main-stats-column">
+                                <section class="stats-banner">
+                                    <div class="stat-box">
+                                        <span class="stat-number" id="vocabCount">78</span> <!--thêm id-->
+                                        <span class="stat-label">Số từ đã học</span>
+                                    </div>
+                                    <div class="stat-chart">
+                                        <img src="Suộc Ảnh/lửa-fotor-bg-remover-20260415103411.png" alt="Chart">
+                                    </div>
+                                    <div class="stat-box">
+                                        <span class="stat-number" id="streakCount">40</span> <!--Thêm id-->
+                                        <span class="stat-label">Chuỗi học tập</span>
+                                    </div>
+                                    <div class="stat-fire">
+                                        <img src="Suộc Ảnh/chuỗi lửa-fotor-bg-remover-20260415103430.png" alt="Fire">
+                                    </div>
+                                </section>
+
+                                <h2 class="content-title">Thư viện của bạn</h2>
+                                
+                                <button class="btn-category" id="folderStat">Thư mục</button> <!--Thêm id-->
+
+                                <div class="library-actions">
+                                    <button class="btn-recent">Gần đây</button>
+                                    
+                                    <div class="search-lesson">
+                                        <input type="text" placeholder="Tìm kiếm bài học">
+                                    </div>
+                                </div>
+
+                                <h3 class="section-subtitle">Hôm nay</h3> <!--Sửa phần này để tự động cập nhật-->
+                                <div class="lesson-card" id="dashTodayLesson" style="cursor: pointer;">
+                                    <span class="lesson-count" id="todayLessonCount">0 từ vựng</span>
+                                    <h4 class="lesson-name" id="todayLessonName">Đang tải...</h4>
+                                </div>
+                            </div>
+                        </div> 
+                    </main>
+                    
+                    <aside class="events-right">
+                        <h2 class="events-title show-alert" style="cursor: pointer;">Events</h2> <!--thêm show-alert-->
+                        <div class="event-list">
+                            <div class="event-item">
+                                <img src="Suộc Ảnh/multitask.jpg" alt="Event 1" class="show-alert" style="cursor: pointer;"> 
+                            </div>
+                            <div class="event-item">
+                                <img src="Suộc Ảnh/studentgroup.jpg" alt="Event 2" class="show-alert" style="cursor: pointer;"> 
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="jstest.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBob Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-image">
+            <img src="Suộc Ảnh/z7699750891590_8538b07e8277c72be0c8544a110c1012.jpg" alt="SpongeBob Background">
+        </div>
+        <div class="login-form-section">
+            
+            <div class="top-header-bar">
+                <h1>ĐĂNG NHẬP</h1>
+                <button class="register-btn">Đăng Ký</button>
+            </div>
+
+            <div class="form-content">
+                <div class="social-login">
+                    <button class="btn-social google">
+                        <img src="Suộc Ảnh/pngtree-google-logo-vector-png-image_12256710.png" alt="Google">
+                        Đăng Nhập bằng Google
+                    </button>
+                    <button class="btn-social facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+                        Đăng Nhập bằng Facebook
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>hoặc Email</span>
+                </div>
+
+                <form id="loginForm"> <!--Thêm id="loginForm"-->
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="text" id="email" placeholder="Nhập địa chỉ Email hoặc tên người dùng của bạn">  <!--Thêm id="email"-->
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label>Mật Khẩu</label>
+                            <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                        </div>
+                        <input type="password" id="password" placeholder="Nhập Mật Khẩu của bạn">  <!--Thêm id="password"-->
+                    </div>
+
+                    <button type="submit" class="login-submit-btn">ĐĂNG NHẬP</button>
+                </form>
+
+                <p class="footer-text">Mới sử dụng SpongeBob ? <a href="trang5.html" class="register-btn">Tạo tài khoản</a></p> <!--sửa href và class="register-btn"-->
+            </div>
+        </div>
+    </div>
+    <!--Nhúng script-->
+    <script src="jstest.js"></script>
+</body>
+</html>

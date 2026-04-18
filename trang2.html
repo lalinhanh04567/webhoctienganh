@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBOB Dashboard - Trang Chủ</title> 
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Francois+One&family=Faustina:wght@300;400;600;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div id="dashboard-page">
+    <div class="container">
+        <aside class="left">
+           <div class="left-col1">
+                <img src="Suộc Ảnh/ngoinha.png" alt="Home" class="icon" onclick="window.location.href='trang2.html'">
+                <img src="Suộc Ảnh/togiay.png" alt="Thumuc" class="icon" onclick="window.location.href='trang7.html'">
+                <img src="Suộc Ảnh/buts.png" alt="pen" class="icon" onclick="window.location.href='trang8.html'">
+                <img src="Suộc Ảnh/ghim.png" alt="ghim" class="icon show-alert">
+            </div>
+            <div class="left-col2">
+                <h1 class="logo">SpongeBOB</h1>
+                <nav class="nav-menu">
+                    <a href="trang2.html" class="Trangchu">Trang chủ</a>
+                    <a href="trang6.html" class="nav-link">Thư viện</a>
+                    <a href="trang7.html" class="nav-link">Học từ mới</a>
+                    <a href="#" class="nav-link show-alert">Luyện thi</a>
+                    <div class="sidebar-divider"></div>
+                </nav>
+                <img src="Suộc Ảnh/sidebar.png" alt="Spongebob" class="sidebar-img">
+            </div>
+        </aside>
+
+        <main class="right">
+            <header class="top">
+                <div class="top-search">
+                    <input type="text" class="search-input" placeholder="Tìm kiếm bài học...">
+                </div>
+                
+                <div class="header-controls">
+                    <span class="v-divider"></span>
+                    <div class="control-item lang show-alert">ENG <span>▼</span></div> 
+                    <span class="v-divider"></span>
+                    <div class="control-item add-btn create-btn">Tạo</div>
+                    <span class="v-divider"></span>
+                    <div class="control-item user">
+                        <img src="Suộc Ảnh/avatar.png" alt="User" class="user-avatar">
+                        <button class="login-btn">Guest</button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="bottom">
+                <section class="bottom-left"> 
+                    <div class="hello-box">
+                        <h2>Hi, Guest!</h2>
+                        <p><strong>Đến lúc ôn tập từ vựng rồi.</strong></p>
+                        <p>Nếu không học, bạn sẽ quên đấy!</p>
+                        <p><strong>Bắt đầu thôi!!</strong></p>
+                        <img src="Suộc Ảnh/hello.png" alt="SpongeBob Hello" class="hello-img">
+                    </div>
+
+                    <div class="mid-bottom">
+                        <div class="left-mid-bottom">
+                            <div class="calendar-container">
+                                <div class="calendar-card">
+                                    <div class="calendar-header">
+                                        <h3>Lịch học tập</h3>
+                                        <div class="calendar-icon-box">
+                                            <span id="current-day-num">18</span>
+                                        </div>
+                                    </div>
+                                    <div class="calendar-controls">
+                                        <select id="month-select"></select>
+                                        <select id="year-select"></select>
+                                    </div>
+                                    <div class="calendar-grid">
+                                        <div class="days-of-week">
+                                            <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
+                                        </div>
+                                        <div id="calendar-days" class="days-grid"></div>
+                                    </div>
+                                    <button id="calendar-confirm-btn" class="confirm-btn">Đặt lịch nhắc</button>
+                                </div>
+                                <img src="Suộc Ảnh/sanho.png" alt="San hô" class="static-coral">
+                            </div>
+
+                            <h3 class="title">Gần đây</h3>
+                            <div class="Recent">
+                                <p>Giữa kì Thiết kế web</p>
+                                <div class="progress-bar"></div>
+                                <button class="show-alert">Tiếp tục</button>
+                            </div>
+                        </div>
+
+                        <div class="Myvisit">
+    <h4>Tiến độ học</h4>
+
+    <div class="visit-item">
+        <div class="circle" style="--percent: 68"><span>68%</span></div>
+        <p>Daily Life</p>
+    </div>
+
+    <div class="visit-item">
+        <div class="circle" style="--percent: 45"><span>45%</span></div>
+        <p>Schools</p>
+    </div>
+
+    <div class="visit-item">
+        <div class="circle" style="--percent: 80"><span>80%</span></div>
+        <p>Travel</p>
+    </div>
+
+    <div class="visit-item">
+        <div class="circle" style="--percent: 30"><span>30%</span></div>
+        <p>Food</p>
+    </div>
+
+    <!-- thêm circle mới -->
+    <div class="visit-item">
+        <div class="circle" style="--percent: 55"><span>55%</span></div>
+        <p>Grammar</p>
+    </div>
+
+    <div class="visit-item">
+        <div class="circle" style="--percent: 72"><span>72%</span></div>
+        <p>Listening</p>
+    </div>
+</div>
+                    </div>
+
+                    <h3 class="title" id="khoa-hoc-section">Các khóa học nổi bật</h3>
+                    <div class="courses-carousel-wrapper">
+                        <div class="arrow prev-arrow">◀</div>
+                        <div class="cackhoahoc">
+                            <div class="course active">
+                                <img src="Suộc Ảnh/khoacoban.png" alt="1000 từ">
+                                <h4>1000 TỪ CƠ BẢN</h4>
+                                <p>1.230.000 VND</p>
+                            </div>
+                            <div class="course">
+                                <img src="Suộc Ảnh/ieltscoban.png" alt="IELTS">
+                                <h4>IELTS CƠ BẢN</h4>
+                                <p>2.250.000 VND</p>
+                            </div>
+                            <div class="course">
+                                <img src="Suộc Ảnh/khoacoban.png" alt="TOEIC">
+                                <h4>TOEIC CƠ BẢN</h4>
+                                <p>1.500.000 VND</p>
+                            </div>
+                        </div>
+                        <div class="arrow next-arrow">▶</div>
+                    </div>
+
+                    <div class="create-section">
+                        <div class="flashcards">
+                            <h3>Tạo bộ Flashcard riêng</h3>
+                            <button>Bắt đầu tạo ngay</button>
+                            <img src="Suộc Ảnh/ghichu.png" alt="Ghi chú" class="flashcard-img">
+                        </div>
+                    </div>
+
+                    <h3 class="title">Câu hỏi luyện tập</h3>
+                    <div class="question">
+                        <p><b>---</b></p>
+                        <div class="ans">---</div>
+                        <div class="ans">---</div>
+                        <div class="ans">---</div>
+                    </div>
+                </section>
+
+                <aside class="bottom-right"> 
+                    <div class="yellow-box" id="btn-cuon-khoa-hoc">
+                        <span>Danh sách<br>các khóa học</span>
+                        <div class="play">▶</div>
+                    </div>
+                    <div class="card-events show-alert">
+                        <h4>Sự kiện mới</h4>
+                        <img src="Suộc Ảnh/events.jpg" alt="Sự kiện" class="card-events-img">
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+</div>
+
+<div id="payment-modal" class="modal-overlay">
+    <div class="modal-content payment-card">
+        <span class="close-modal">&times;</span>
+        
+        <div class="payment-header">
+            <h3>Xác nhận thanh toán</h3>
+            <p style="font-size: 14px;">Bạn đang đăng ký: <span id="modal-course-name" class="highlight">---</span></p>
+        </div>
+
+        <div class="payment-body">
+            <div class="order-summary">
+                <img id="modal-course-img" src="" alt="Course">
+                <div class="price-box">
+                    <span style="font-size: 12px; color: #666;">Tổng cộng:</span>
+                    <h2 id="modal-course-price">0 VND</h2>
+                </div>
+                
+                <div class="coupon-section">
+                    <input type="text" id="coupon-input" placeholder="Mã giảm giá">
+                    <button id="apply-coupon">Dùng</button>
+                </div>
+                <p id="coupon-message" style="font-size: 11px; margin-top: 5px; min-height: 15px;"></p>
+            </div>
+
+            <div class="payment-methods">
+                <h4 style="font-size: 14px; margin-bottom: 10px;">Chọn phương thức:</h4>
+                <div class="method-options">
+                    <label class="method-item active">
+                        <input type="radio" name="pay-method" value="qr" checked>
+                        <img src="https://img.icons8.com/color/48/qr-code.png" style="width:20px">
+                        <span>QR Code</span>
+                    </label>
+                    <label class="method-item">
+                        <input type="radio" name="pay-method" value="momo">
+                        <img src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png" style="width:20px">
+                        <span>Ví MoMo</span>
+                    </label>
+                    <label class="method-item">
+                        <input type="radio" name="pay-method" value="card">
+                        <img src="https://img.icons8.com/color/48/visa.png" style="width:20px">
+                        <span>Thẻ Visa</span>
+                    </label>
+                </div>
+
+                <div id="method-details" class="method-details">
+                    <div class="qr-display">
+                        <p style="font-size: 12px; margin-bottom: 5px;">Quét mã để thanh toán:</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SpongeBobPay" alt="QR Code">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="pay-now-btn" class="final-pay-btn">THANH TOÁN NGAY</button>
+    </div>
+</div>
+
+<script src="jstest.js" defer></script>
+</body>
+</html>
