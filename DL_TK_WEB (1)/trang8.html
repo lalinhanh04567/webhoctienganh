@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBOB Dashboard - Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar-container">
+            <div class="slim-sidebar">
+                <div class="slim-item"><img src="Suộc Ảnh/ngoinha.png" onclick="window.location.href='trang2.html'"></div>
+                <div class="slim-item active"><img src="Suộc Ảnh/togiay.png" onclick="window.location.href='trang7.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/buts.png" onclick="window.location.href='trang8.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/ghim.png" class="show-alert"></div>
+            </div>
+            <div class="menu-sidebar">
+                <h1 class="logo">SpongeBOB</h1>
+                <nav class="nav-menu">
+                    <a href="trang2.html" class="nav-link">Trang chủ</a> <!--thay đổi đường dẫn-->
+                    <a href="trang6.html" class="nav-link">Thư viện</a>
+                    <a href="trang7.html" class="nav-link active">Học từ mới</a>
+                    <a href="#" class="nav-link">Luyện thi</a>
+                    <div class="sidebar-divider"></div>
+                </nav>
+                <div class="sidebar-illustration">
+                    <img src="Suộc Ảnh/sidebar.png" alt="Spongebob and friends">
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="top-header">
+                <div class="search-section">
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                
+                <div class="header-controls">
+                    <span class="v-divider"></span>
+                    <div class="control-item lang show-alert" style="cursor: pointer;">ENG <span>▼</span></div>
+                    <span class="v-divider"></span>
+                    <div class="control-item add-btn create-btn" style="cursor: pointer;">Tạo</div>
+                    <span class="v-divider"></span>
+                    <div class="control-item user login-btn" style="cursor: pointer;">
+                        <img src="Suộc Ảnh/thinking.jpg" class="user-avatar">
+                        <span class="username">Guest <span>▼</span></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-grid">
+                    <main class="content-left">
+                        <section class="learning-header-container">
+                            <h1 class="schools-title" id="deckTitleDisplay">Schools</h1> <!--Thêm id để hiển thị tiêu đề bộ bài-->
+                            <div class="action-row">
+                                <div class="action-group">
+                                    <button class="btn-pill-white">Tạo bản sao</button>
+                                    <button class="btn-pill-white">Lưu</button>
+                                    <button class="btn-pill-white" id="deleteDeckBtn" style="color: #ff4d4d; border-color: #ffb3b3;">Xóa</button>
+                                    <span class="more-dots">...</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <nav class="learning-tabs">
+                            <button class="tab-pill">Học</button>
+                            <button class="tab-pill active">Thẻ ghi nhớ</button>
+                            <button class="tab-pill">Kiểm tra</button>
+                        </nav>
+                            <!--Thêm id cho từng phần-->
+                        <div class="main-flashcard" id="flashcard">
+                            <div class="card-inner flashcard-inner">
+                                <div class="card-front">
+                                    <h1 class="vocab-word" id="cardTerm">student</h1>
+                                </div>
+                                <div class="card-back">
+                                    <p class="vocab-definition" id="cardDef">Học sinh, Sinh viên</p>
+                                </div>
+                            </div>
+                            <div class="card-controls">
+                                <span class="arrow" id="prevCard" style="cursor:pointer;">←</span>
+                                <span class="pager" id="cardCount">1/40</span>
+                                <span class="arrow" id="nextCard" style="cursor:pointer;">→</span>
+                            </div>
+                        </div>
+
+                        <hr class="section-divider">
+
+                        <div class="vocab-list-container">
+                            <h3 class="list-label">Nội dung</h3>
+                            
+                            <div class="vocab-row">
+                                <div class="term-col">
+                                    <strong>student</strong>
+                                    <span>/stu:dnt/</span>
+                                </div>
+                                <div class="divider-line"></div>
+                                <div class="def-col">Học sinh, Sinh viên</div>
+                                <div class="star-col">★</div>
+                            </div>
+
+                            <div class="vocab-row">
+                                <div class="term-col">
+                                    <strong>teacher</strong>
+                                    <span>/ti:tʃər/</span>
+                                </div>
+                                <div class="divider-line"></div>
+                                <div class="def-col">Giáo viên (n)</div>
+                                <div class="star-col">★</div>
+                            </div>
+                        </div>
+
+                        <footer class="content-footer-btns">
+                            <button class="btn-footer-outline">Ẩn định nghĩa</button>
+                            <button class="btn-footer-solid">Ôn tập qua hoạt động <span>▼</span></button>
+                        </footer>
+                    </main>
+
+                    <aside class="content-right">
+                        <h2 class="events-title">Events</h2>
+                        <div class="event-list">
+                            <div class="event-item">
+                                <img src="Suộc Ảnh/multitask.jpg" alt="Event 1">
+                            </div>
+                            <div class="event-item">
+                                <img src="Suộc Ảnh/studentgroup.jpg" alt="Event 2">
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            
+    <script src="jstest.js"></script>
+</body>
+</html>

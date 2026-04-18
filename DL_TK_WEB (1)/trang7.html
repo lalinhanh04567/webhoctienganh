@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpongeBOB Dashboard - Thư viện</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <aside class="sidebar-container">
+            <div class="slim-sidebar">
+                <div class="slim-item"><img src="Suộc Ảnh/ngoinha.png" onclick="window.location.href='trang2.html'"></div>
+                <div class="slim-item active"><img src="Suộc Ảnh/togiay.png" onclick="window.location.href='trang7.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/buts.png" onclick="window.location.href='trang8.html'"></div>
+                <div class="slim-item"><img src="Suộc Ảnh/ghim.png" class="show-alert"></div>
+            </div>
+            <div class="menu-sidebar">
+                <h1 class="logo">SpongeBOB</h1>
+                <nav class="nav-menu">
+                    <a href="trang2.html" class="nav-link">Trang chủ</a>
+                    <a href="trang6.html" class="nav-link">Thư viện</a>
+                    <a href="trang7.html" class="nav-link active">Học từ mới</a>
+                    <a href="#" class="nav-link">Luyện thi</a>
+                    <div class="sidebar-divider"></div>
+                </nav>
+                <div class="sidebar-illustration">
+                    <img src="Suộc Ảnh/sidebar.png" alt="Spongebob and friends">
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="top-header">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                
+                <div class="header-controls">
+                    <span class="v-divider"></span>
+                    <div class="control-item lang show-alert" style="cursor: pointer;">ENG <span>▼</span></div><!--Thêm show-alert-->
+                    <span class="v-divider"></span>
+                    <div class="control-item add-btn create-btn" style="cursor: pointer;">Tạo</div> <!--thêm create-btn-->
+                    <span class="v-divider"></span>
+                    <div class="control-item user login-btn" style="cursor: pointer;"> <!--Thêm login-btn-->
+                        <img src="Suộc Ảnh/thinking.jpg" class="user-avatar">
+                        <span class="username">Guest <span>▼</span></span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <div class="dashboard-grid">
+                
+                    <main class="content-left">
+                        <h2 class="main-title">Sổ tay từ vựng của bạn</h2>
+
+                        <div class="vocab-stats">
+                            <div class="stat-card">
+                                <img src="Suộc Ảnh/writing-removebg-preview.png" class="card-img">
+                                <div class="stat-info">
+                                    <span class="num yellow" id="reviewCount">67</span> <!--Thêm id="reviewCount" để hiển thị số lượng từ ôn tập-->
+                                    <span class="label">Từ ôn tập</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <img src="Suộc Ảnh/sleep-removebg-preview.png" class="card-img">
+                                <div class="stat-info">
+                                    <span class="num orange" id="hibernateCount">23</span> <!--Thêm id="hibernateCount" để hiển thị số lượng từ ngủ đông-->
+                                    <span class="label">Từ ngủ đông</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn-main btn-yellow" onclick="window.location.href='trang2.html'">Luyện tập</button> <!--thêm đường dẫn đến trang 2-->
+                            <button class="btn-main btn-white" onclick="window.location.href='trang9.html'">Tạo Flashcard</button> <!--thêm đường dẫn đến trang 9-->
+                        </div>
+
+                        <div class="topics-section">
+                            <h3 class="sub-title">Các chủ đề phổ biến</h3>
+                            <div class="topics-container"> <!--thêm show--->
+                                <button class="arrow-btn left show-alert">◀</button> 
+                                <div class="topic-card show-alert" style="cursor: pointer;"><img src="Suộc Ảnh/timee.jpg"></div>
+                                <div class="topic-card show-alert" style="cursor: pointer;"><img src="Suộc Ảnh/anxiety.jpg"></div>
+                                <div class="topic-card show-alert" style="cursor: pointer;"><img src="Suộc Ảnh/cuochop.jpg"></div>
+                                <button class="arrow-btn right show-alert">▶</button>
+                            </div>
+                        </div>
+
+                        <div class="basic-list-section">
+                            <div class="list-header">1000 Từ cơ bản</div>
+                            <div class="list-scroll-area" id="deckListContainer"></div>
+                        </div>
+
+                        <footer class="content-footer">
+                            <div class="footer-links">
+                                <a href="#" class="footer-item show-alert">Quyền riêng tư</a>
+                                <a href="#" class="footer-item show-alert">Điều khoản</a>
+                            </div>
+                            <div class="footer-lang show-alert" style="cursor: pointer;">
+                                <span class="lang-box">ENG ▼</span>
+                            </div>
+                        </footer>
+                    </main>
+
+                    <aside class="content-right">
+                        <h2 class="events-title show-alert" style="cursor: pointer;">Events</h2>
+                        <div class="event-list">
+                            <div class="event-item show-alert" style="cursor: pointer;">
+                                <img src="Suộc Ảnh/multitask.jpg" alt="Event 1">
+                            </div>
+                            <div class="event-item show-alert" style="cursor: pointer;">
+                                <img src="Suộc Ảnh/studentgroup.jpg" alt="Event 2">
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jstest.js"></script>
+</body>
+</html>
